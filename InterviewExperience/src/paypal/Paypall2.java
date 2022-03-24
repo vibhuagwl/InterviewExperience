@@ -232,7 +232,8 @@ public class Paypall2 {
 		employeesList.add(new Employee(105, "Slagan", "Software Engineer", "Male", 15_00_000));
 		employeesList.add(new Employee(106, "Murekan", "Software Engineer", "Male", 15_00_000));
 		employeesList.add(new Employee(107, "Gagy", "Software Engineer", "Male", 15_00_000));
-		Comparator<Employee> empNameComparator = Comparator.comparing(Employee::getName).thenComparing(Employee::getAge);
+		Comparator<Employee> empNameComparator = Comparator.comparing(Employee::getName)
+				.thenComparing(Employee::getAge);
 		Collections.sort(employeesList, empNameComparator);
 		employeesList.forEach(System.out::println);
 		Stream<Integer> s = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);

@@ -20,7 +20,7 @@ class accolitel2 {
 
 	static List<Integer> merge(List<Integer> sortedList1, List<Integer> sortedList2) {
 		ArrayList<Integer> result = new ArrayList<>();
-		int length = sortedList1.size() > sortedList1.size() ? sortedList2.size() : sortedList1.size();
+		int length = sortedList1.size() > sortedList2.size() ? sortedList2.size() : sortedList1.size();
 		int i = 0;
 		int j = 0;
 		while (i < length && j < length) {

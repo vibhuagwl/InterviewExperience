@@ -34,18 +34,16 @@ public class tomtoml1 {
 			for (int j = i + 1; j <= len; j++) {
 				String stem = s.substring(i, j);
 				int k = 1;
-				for (k = 1; k < n; k++)
-
+				for (k = 1; k < n; k++) {
 					if (!arr[k].contains(stem))
 						break;
+				}
 				if (k == n && res.length() < stem.length())
 					res = stem;
 			}
 		}
 		return res;
 	}
-
-
 
 	public static void main(String args[]) {
 		String arr[] = { "grace", "graceful", "disgraceful", "gracefully" };

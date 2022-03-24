@@ -10,6 +10,7 @@ class stem {
 	// function to find the stem (longest common
 	// substring) from the string array
 	public static String findstem(String arr[]) {
+		//"grace", "graceful", "disgraceful", "gracefully"
 		// Determine size of the array
 		int n = arr.length;
 
