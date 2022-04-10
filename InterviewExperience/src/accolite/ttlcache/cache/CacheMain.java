@@ -15,21 +15,23 @@ import java.util.logging.Logger;
  */
 public class CacheMain {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) throws IOException {
-        try {
-            // TODO code application logic here
-            Cache<String, String> cache = Cache.getInstance();
-            Thread T1 = new Thread(new TestThread(cache, "TH", true));
-            Thread T2 = new Thread(new TestThread(cache, "TH", false));
-            T1.start();
-            T2.start();
-            T1.join();
-            T2.join();
-            cache.deleteCache();
-            //new Thread(new TestThread(cache, "TH_3")).start();
+	/**
+	 * @param args the command line arguments
+	 */
+	public static void main(String[] args) throws IOException {
+		try {
+			
+			
+			// TODO code application logic here
+			Cache<String, String> cache = Cache.getInstance();
+			Thread T1 = new Thread(new TestThread(cache, "TH", true));
+			Thread T2 = new Thread(new TestThread(cache, "TH", false));
+			T1.start();
+			T2.start();
+			T1.join();
+			T2.join();
+			cache.deleteCache();
+			// new Thread(new TestThread(cache, "TH_3")).start();
 //        InputStreamReader inputStreamReader = new InputStreamReader(System.in);
 //        BufferedReader reader = new BufferedReader(inputStreamReader);
 //        while (true) {
@@ -52,9 +54,9 @@ public class CacheMain {
 //                    return;
 //            }
 //        }
-        } catch (InterruptedException ex) {
-            Logger.getLogger(CacheMain.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
+		} catch (InterruptedException ex) {
+			Logger.getLogger(CacheMain.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
 
 }

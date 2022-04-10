@@ -47,8 +47,8 @@ public class tomtoml1 {
 
 	public static void main(String args[]) {
 		String arr[] = { "grace", "graceful", "disgraceful", "gracefully" };
-		String stems = findstem(arr);
 		findItem(arr);
+		String stems = findstem(arr);
 		System.out.println(stems);
 	}
 //alpha & gamma

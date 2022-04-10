@@ -277,6 +277,9 @@ public class Paypall2 {
 								(a, b) -> a, LinkedHashMap::new));
 
 		int[] array = { 23, 43, 56, 97, 32 };
+
+		mapOfList.entrySet().stream().sorted(Map.Entry.comparingByKey())
+				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (a, b) -> a, LinkedHashMap::new));
 		Arrays.stream(array).reduce((x, y) -> x + y).ifPresent(System.out::print);
 		Arrays.stream(array).reduce(Integer::sum).ifPresent(System.out::print);
 		Arrays.stream(array).reduce(StatisticsUtility::addIntData);
